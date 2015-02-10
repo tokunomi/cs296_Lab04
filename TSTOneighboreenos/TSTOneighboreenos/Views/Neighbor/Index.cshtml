@@ -1,0 +1,48 @@
+﻿@model IEnumerable<TSTOneighboreenos.Models.Player>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Neighbors Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TSTOhandle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SFpath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Active)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TSTOhandle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SFpath)
+                <!--<img src="@Url.Content(Model.SFpath)" alt="" />-->
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
